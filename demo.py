@@ -36,9 +36,9 @@ while True:
                 centerX = 1280 - corner[0][0][0] - corner[0][1][0]
                 relative_angle = math.radians(centerX * _config_camera_angle / _config_camera_pixel_width + _camera_zero_offset)
 
-                if targetid[0] == 0:
+                if targetid[0] == 2:
                     a1 = relative_angle
-                elif targetid[0] == 1:
+                elif targetid[0] == 3:
                     a0 = relative_angle
 
             theta0 = a1 - a0
