@@ -12,6 +12,8 @@ _config_camera_angle = 74
 _config_camera_pixel_width = 1280
 _camera_zero_offset = (180 - _config_camera_angle) / 2
 
+_target_dist = 51.5 # Inches
+
 while True:
     ret, im = cap.read()
 
@@ -35,12 +37,12 @@ while True:
         theta2 = 180 - theta0 - theta1
 
         c = theta2 / math.sin(math.radians(theta0))
-        y = c * math.sin(math.radians(a0))
-        x = c * math.cos(math.radians(a0))
+        y = c * math.sin(math.radians(a0)) / 90 * _target_dist
+        x = c * math.cos(math.radians(a0)) / 90 * _target_dist
 
         print "x: " + str(int(x)) + ", y: " + str(int(y))
 
-        cv2.putText(im, "x: " + str(int(x)) + ", y: " + str(int(y)), (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 0), lineType=cv2.LINE_AA) 
+        cv2.putText(im, "x: " + str(int(x)) + ", y: " + str(int(y)), (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), lineType=cv2.LINE_AA) 
 
 #53
         aruco.drawDetectedMarkers(im, corners)
