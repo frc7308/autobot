@@ -10,7 +10,7 @@ This project is currently in it's very early stages.
 
 ### Prerequisites
 
-* Python2.7
+* Python 2.7
 * Windows 7 or greater, Mac OS Yosemite or greater, or Debian/Ubuntu 16.04 or greater.
 * A USB or integrated webcam
 
@@ -30,9 +30,9 @@ Set Up Targets:
 
 2. Post the ArUco targets on a wall with the same height from the ground vertically but a few feet apart horizontally. The target with ID 0 should be on the left and the target with ID 1 should be on the right.
 
-3. Measure the distance between the targets (in inches) and set the `_target_dist` variable in demo.py to match your measurement.
+3. Measure the distance between the targets (in inches) and set the `_target_dist` variable in `demo.py` to match your measurement.
 
-4. Change the config settings in `demo.py` to fit your webcam's specs (the variables that start with `_config_camera`).
+4. Also in `demo.py`, change the variables that start with `_config_camera` to fit your camera's specs.
 
 ### Run:
 
@@ -42,6 +42,6 @@ Run the demo:
 python demo.py
 ```
 
-Coordinates are displayed in the upper-left hand corner and are in units of inches.
+Coordinates are displayed in the bottom left corner and are in units of inches.
 
-To stop the demo, press q while focused on the display window.
+To stop the demo, press `q` while focused on the display window.
