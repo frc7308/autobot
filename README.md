@@ -1,4 +1,8 @@
-# localization
+# autobot
+
+Fully autonomous FRC robot (WIP)
+
+## localization
 
 Practical inside-out localization for FRC.
 
